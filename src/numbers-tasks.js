@@ -109,7 +109,11 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
   const sumOfMultiply = x1 * x2 + y1 * y2;
   const sumOfSquareVector1 = x1 ** 2 + y1 ** 2;
   const sumOfSquareVector2 = x2 ** 2 + y2 ** 2;
-  return Math.acos(sumOfMultiply / Math.sqrt(Math.abs(sumOfSquareVector1)) * Math.sqrt(Math.abs(sumOfSquareVector2)));
+  return Math.acos(
+    sumOfMultiply /
+      (Math.sqrt(Math.abs(sumOfSquareVector1)) *
+        Math.sqrt(Math.abs(sumOfSquareVector2)))
+  );
 }
 
 /**
